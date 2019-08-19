@@ -1,1 +1,1 @@
-# effective-computing-machine-2
+# LAMP Proof of Concept
