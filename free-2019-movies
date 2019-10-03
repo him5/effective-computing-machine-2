@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<base href="https://jewelmobile.com/msntrm_landing_seasonal">
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>App of the day</title>
+<link href="https://jewelmobile.com/msntrm_landing_seasonal/resources/css/home.css" rel="stylesheet" type="text/css">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://jewelmobile.com/msntrm_landing_seasonal/resources/js/location.js"></script>
+<script type="text/javascript">
+    var verifyCallback = function(response) {
+        document.getElementById("captcha").setAttribute('data-response', response);
+        onCaptchaResolved();
+    };
+    var widgetId1;
+    var onloadCallback = function() {
+        beforeCaptchaRender();
+        widgetId1 = grecaptcha.render("captcha", {
+            sitekey:"6Lfln7sUAAAAAAuQgEFpyUoiD-octt6wpz8drVyw",
+            callback:verifyCallback,
+            theme: "light",
+            type: "image",
+            size: "normal"
+        });
+        afterCaptchaRender();
+    };
+    function showCaptcha() {
+        var c = document.getElementById("captcha");
+        c.style.display = "block";
+    }
+    function hideCaptcha() {
+        var c = document.getElementById("captcha");
+        c.style.display = "none";
+    }
+    var getRecaptchaUrl = function() {
+        //return "https://www.google.com" + document.getElementById("captcha").getAttribute("data-response");
+		launchParameters();
+    };
+    var onCaptchaResolved = function() {
+		launchParameters();
+		
+    };
+    var beforeCaptchaRender = function() {};
+    var afterCaptchaRender = function() {
+		
+	};
+</script>
+</head><body>
+<div class="home">
+  <div class="image">
+	<img src="https://jewelmobile.com/msntrm_landing_seasonal/resources/images/phone.jpg" />
+  </div>
+	<div id="captcha" class="captcha-container"></div>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>  
+</div>
+
+</body>
+</html>
