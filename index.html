@@ -1,372 +1,118 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <!--
-    Modified from the Debian original for Ubuntu
-    Last updated: 2014-03-19
-    See: https://launchpad.net/bugs/1288690
-  -->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Apache2 Ubuntu Default Page: It works</title>
-    <style type="text/css" media="screen">
-  * {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-  }
-
-  body, html {
-    padding: 3px 3px 3px 3px;
-
-    background-color: #D8DBE2;
-
-    font-family: Verdana, sans-serif;
-    font-size: 11pt;
-    text-align: center;
-  }
-
-  div.main_page {
-    position: relative;
-    display: table;
-
-    width: 800px;
-
-    margin-bottom: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 0px 0px 0px;
-
-    border-width: 2px;
-    border-color: #212738;
-    border-style: solid;
-
-    background-color: #FFFFFF;
-
-    text-align: center;
-  }
-
-  div.page_header {
-    height: 99px;
-    width: 100%;
-
-    background-color: #F5F6F7;
-  }
-
-  div.page_header span {
-    margin: 15px 0px 0px 50px;
-
-    font-size: 180%;
-    font-weight: bold;
-  }
-
-  div.page_header img {
-    margin: 3px 0px 0px 40px;
-
-    border: 0px 0px 0px;
-  }
-
-  div.table_of_contents {
-    clear: left;
-
-    min-width: 200px;
-
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.table_of_contents_item {
-    clear: left;
-
-    width: 100%;
-
-    margin: 4px 0px 0px 0px;
-
-    background-color: #FFFFFF;
-
-    color: #000000;
-    text-align: left;
-  }
-
-  div.table_of_contents_item a {
-    margin: 6px 0px 0px 6px;
-  }
-
-  div.content_section {
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.content_section_text {
-    padding: 4px 8px 4px 8px;
-
-    color: #000000;
-    font-size: 100%;
-  }
-
-  div.content_section_text pre {
-    margin: 8px 0px 8px 0px;
-    padding: 8px 8px 8px 8px;
-
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #000000;
-
-    background-color: #F5F6F7;
-
-    font-style: italic;
-  }
-
-  div.content_section_text p {
-    margin-bottom: 6px;
-  }
-
-  div.content_section_text ul, div.content_section_text li {
-    padding: 4px 8px 4px 16px;
-  }
-
-  div.section_header {
-    padding: 3px 6px 3px 6px;
-
-    background-color: #8E9CB2;
-
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-  }
-
-  div.section_header_red {
-    background-color: #CD214F;
-  }
-
-  div.section_header_grey {
-    background-color: #9F9386;
-  }
-
-  .floating_element {
-    position: relative;
-    float: left;
-  }
-
-  div.table_of_contents_item a,
-  div.content_section_text a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div.table_of_contents_item a:link,
-  div.table_of_contents_item a:visited,
-  div.table_of_contents_item a:active {
-    color: #000000;
-  }
-
-  div.table_of_contents_item a:hover {
-    background-color: #000000;
-
-    color: #FFFFFF;
-  }
-
-  div.content_section_text a:link,
-  div.content_section_text a:visited,
-   div.content_section_text a:active {
-    background-color: #DCDFE6;
-
-    color: #000000;
-  }
-
-  div.content_section_text a:hover {
-    background-color: #000000;
-
-    color: #DCDFE6;
-  }
-
-  div.validator {
-  }
-    </style>
-  </head>
-  <body>
-    <div class="main_page">
-      <div class="page_header floating_element">
-        <img src="ubuntu-logo.png" alt="Ubuntu Logo" class="floating_element"/>
-        <span class="floating_element">
-          Apache2 Ubuntu Default Page
-        </span>
-      </div>
-<!--      <div class="table_of_contents floating_element">
-        <div class="section_header section_header_grey">
-          TABLE OF CONTENTS
-        </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#about">About</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#changes">Changes</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#scope">Scope</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#files">Config files</a>
-        </div>
-      </div>
--->
-      <div class="content_section floating_element">
-
-
-        <div class="section_header section_header_red">
-          <div id="about"></div>
-          It works!
-        </div>
-        <div class="content_section_text">
-          <p>
-                This is the default welcome page used to test the correct 
-                operation of the Apache2 server after installation on Ubuntu systems.
-                It is based on the equivalent page on Debian, from which the Ubuntu Apache
-                packaging is derived.
-                If you can read this page, it means that the Apache HTTP server installed at
-                this site is working properly. You should <b>replace this file</b> (located at
-                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
-          </p>
-
-
-          <p>
-                If you are a normal user of this web site and don't know what this page is
-                about, this probably means that the site is currently unavailable due to
-                maintenance.
-                If the problem persists, please contact the site's administrator.
-          </p>
-
-        </div>
-        <div class="section_header">
-          <div id="changes"></div>
-                Configuration Overview
-        </div>
-        <div class="content_section_text">
-          <p>
-                Ubuntu's Apache2 default configuration is different from the
-                upstream default configuration, and split into several files optimized for
-                interaction with Ubuntu tools. The configuration system is
-                <b>fully documented in
-                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
-                documentation. Documentation for the web server itself can be
-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
-                package was installed on this server.
-
-          </p>
-          <p>
-                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:
-          </p>
-          <pre>/etc/apache2/
-|-- apache2.conf
-|       `--  ports.conf
-|-- mods-enabled
-|       |-- *.load
-|       `-- *.conf
-|-- conf-enabled
-|       `-- *.conf
-|-- sites-enabled
-|       `-- *.conf
-          </pre>
-          <ul>
-                        <li>
-                           <tt>apache2.conf</tt> is the main configuration
-                           file. It puts the pieces together by including all remaining configuration
-                           files when starting up the web server.
-                        </li>
-
-                        <li>
-                           <tt>ports.conf</tt> is always included from the
-                           main configuration file. It is used to determine the listening ports for
-                           incoming connections, and this file can be customized anytime.
-                        </li>
-
-                        <li>
-                           Configuration files in the <tt>mods-enabled/</tt>,
-                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain
-                           particular configuration snippets which manage modules, global configuration
-                           fragments, or virtual host configurations, respectively.
-                        </li>
-
-                        <li>
-                           They are activated by symlinking available
-                           configuration files from their respective
-                           *-available/ counterparts. These should be managed
-                           by using our helpers
-                           <tt>
-                                <a href="https://manpages.debian.org/cgi-bin/man.cgi?query=a2enmod">a2enmod</a>,
-                                <a href="https://manpages.debian.org/cgi-bin/man.cgi?query=a2dismod">a2dismod</a>,
-                           </tt>
-                           <tt>
-                                <a href="https://manpages.debian.org/cgi-bin/man.cgi?query=a2ensite">a2ensite</a>,
-                                <a href="https://manpages.debian.org/cgi-bin/man.cgi?query=a2dissite">a2dissite</a>,
-                            </tt>
-                                and
-                           <tt>
-                                <a href="https://manpages.debian.org/cgi-bin/man.cgi?query=a2enconf">a2enconf</a>,
-                                <a href="https://manpages.debian.org/cgi-bin/man.cgi?query=a2disconf">a2disconf</a>
-                           </tt>. See their respective man pages for detailed information.
-                        </li>
-
-                        <li>
-                           The binary is called apache2. Due to the use of
-                           environment variables, in the default configuration, apache2 needs to be
-                           started/stopped with <tt>/etc/init.d/apache2</tt> or <tt>apache2ctl</tt>.
-                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the
-                           default configuration.
-                        </li>
-          </ul>
-        </div>
-
-        <div class="section_header">
-            <div id="docroot"></div>
-                Document Roots
-        </div>
-
-        <div class="content_section_text">
-            <p>
-                By default, Ubuntu does not allow access through the web browser to
-                <em>any</em> file apart of those located in <tt>/var/www</tt>,
-                <a href="https://httpd.apache.org/docs/2.4/mod/mod_userdir.html">public_html</a>
-                directories (when enabled) and <tt>/usr/share</tt> (for web
-                applications). If your site is using a web document root
-                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your
-                document root directory in <tt>/etc/apache2/apache2.conf</tt>.
-            </p>
-            <p>
-                The default Ubuntu document root is <tt>/var/www/html</tt>. You
-                can make your own virtual hosts under /var/www. This is different
-                to previous releases which provides better security out of the box.
-            </p>
-        </div>
-
-        <div class="section_header">
-          <div id="bugs"></div>
-                Reporting Problems
-        </div>
-        <div class="content_section_text">
-          <p>
-                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the
-                Apache2 package with Ubuntu. However, check <a
-                href="https://bugs.launchpad.net/ubuntu/+source/apache2">existing
-                bug reports</a> before reporting a new bug.
-          </p>
-          <p>
-                Please report bugs specific to modules (such as PHP and others)
-                to respective packages, not to the web server itself.
-          </p>
-        </div>
-
-
-
-
-      </div>
-    </div>
-    <div class="validator">
-    </div>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+	<head>
+		<title>Apache HTTP Server Test Page powered by CentOS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+			body {
+				background-color: #fff;
+				color: #000;
+				font-size: 0.9em;
+				font-family: sans-serif,helvetica;
+				margin: 0;
+				padding: 0;
+			}
+			:link {
+				color: #0000FF;
+			}
+			:visited {
+				color: #0000FF;
+			}
+			a:hover {
+				color: #3399FF;
+			}
+			h1 {
+				text-align: center;
+				margin: 0;
+				padding: 0.6em 2em 0.4em;
+				background-color: #3399FF;
+				color: #ffffff;
+				font-weight: normal;
+				font-size: 1.75em;
+				border-bottom: 2px solid #000;
+			}
+			h1 strong {
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+			.content {
+				padding: 1em 5em;
+			}
+			.content-columns {
+				/* Setting relative positioning allows for 
+				absolute positioning for sub-classes */
+				position: relative;
+				padding-top: 1em;
+			}
+			.content-column-left {
+				/* Value for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-right: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-column-right {
+				/* Values for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-left: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-columns>.content-column-left, .content-columns>.content-column-right {
+				/* Non-IE/Win */
+			}
+			img {
+				border: 2px solid #fff;
+				padding: 2px;
+				margin: 2px;
+			}
+			a:hover img {
+				border: 2px solid #3399FF;
+			}
+		</style>
+	</head>
+
+	<body>
+	<h1>Apache 2 Test Page<br><font size="-1"><strong>powered by</font> CentOS</strong></h1>
+
+		<div class="content">
+			<div class="content-middle">
+				<p>This page is used to test the proper operation of the Apache HTTP server after it has been installed. If you can read this page it means that the Apache HTTP server installed at this site is working properly.</p>
+			</div>
+<hr />
+			<div class="content-columns">
+				<div class="content-column-left">
+					<h2>If you are a member of the general public:</h2>
+
+					<p>The fact that you are seeing this page indicates that the website you just visited is either experiencing problems or is undergoing routine maintenance.</p>
+
+					<p>If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail. In general, mail sent to the name "webmaster" and directed to the website's domain should reach the appropriate person.</p>
+
+					<p>For example, if you experienced problems while visiting www.example.com, you should send e-mail to "webmaster@example.com".</p>
+				</div>
+
+				<div class="content-column-right">
+					<h2>If you are the website administrator:</h2>
+
+					<p>You may now add content to the directory <tt>/var/www/html/</tt>. Note that until you do so, people visiting your website will see this page and not your content. To prevent this page from ever being used, follow the instructions in the file <tt>/etc/httpd/conf.d/welcome.conf</tt>.</p>
+
+						<p>You are free to use the images below on Apache and CentOS Linux powered HTTP servers.  Thanks for using Apache and CentOS!</p>
+
+						<p><a href="http://httpd.apache.org/"><img src="apache_pb.gif" alt="[ Powered by Apache ]"/></a> <a href="http://www.centos.org/"><img src="poweredby.png" alt="[ Powered by CentOS Linux ]" width="88" height="31" /></a></p>
+				</div>
+			</div>
+                </div>
+                <div class="content">
+                        <div class="content-middle"><h2>About CentOS:</h2><b>The Community ENTerprise Operating System</b> (CentOS) is an Enterprise-class Linux Distribution derived from sources freely provided to the public by a prominent North American Enterprise Linux vendor.  CentOS conforms fully with the upstream vendors redistribution policy and aims to be 100% binary compatible. (CentOS mainly changes packages to remove upstream vendor branding and artwork.)  The CentOS Project is the organization that builds CentOS.</p>
+<p>For information on CentOS please visit the <a href="http://www.centos.org/">CentOS website</a>.</p>
+<p><h2>Note:</h2><p>CentOS is an Operating System and it is used to power this website; however, the webserver is owned by the domain owner and not the CentOS Project.  <b>If you have issues with the content of this site, contact the owner of the domain, not the CentOS project.</b>
+<p>Unless this server is on the CentOS.org domain, the CentOS Project doesn't have anything to do with the content on this webserver or any e-mails that directed you to this site.</p>
+<p>For example, if this website is www.example.com, you would find the owner of the example.com domain at the following WHOIS server:</p>
+<p><a href="http://www.internic.net/whois.html">http://www.internic.net/whois.html</a></p>
+
+                        </div>
+		</div>
+</body>
 </html>
